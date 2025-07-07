@@ -14,14 +14,116 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div>
-          <img src="assets/images/logo-full.svg" alt="Coding Conference Logo" />
-        </div>
-      </header>
+      <div class="logo-container">
+        <img src="assets/images/logo-full.svg" alt="Coding Conference Logo" />
+      </div>
 
       <main>
-        <!-- <div><img src="assets/images/pattern-ticket.svg" alt="" /></div> -->
+        <div class="header">
+          <hgroup class="primary-header">
+            <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+            <p>Secure your spot at next year's biggest coding conference.</p>
+          </hgroup>
+
+          <hgroup class="secondary-header hidden">
+            <h1>
+              Congrats, <span class="user-name">Jonatan Kristof</span>! Your
+              ticket is ready.
+            </h1>
+            <p>
+              We've emailed your ticket to
+              <span class="user-email">jonatan@email.com</span> and will send
+              updates in the run up to the event.
+            </p>
+          </hgroup>
+        </div>
+
+        <form action="">
+          <div class="input-container">
+            <div class="avatar-input-label" aria-hidden="true">
+              Upload Avatar
+            </div>
+            <label
+              for="avatar"
+              aria-labelledby="avatar-container-descripion"
+              tabindex="0"
+            >
+              <div>
+                <img src="assets/images/icon-upload.svg" alt="" />
+              </div>
+              <div>Drag and drop or click to upload</div>
+            </label>
+            <input
+              type="file"
+              name="avatar"
+              id="avatar"
+              accept="image/*"
+              class="hidden"
+            />
+            <div id="avatar-container-descripion">
+              <img src="assets/images/icon-info.svg" aria-hidden="true" />
+              <div id="">
+                <small>Upload your photo (JPG or PNG, max size: 500kb)</small>
+              </div>
+            </div>
+          </div>
+          <div class="input-container">
+            <label for="full-name">Full Name</label>
+            <input type="text" name="full-name" id="full-name" />
+          </div>
+          <div class="input-container">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+            />
+          </div>
+          <div class="input-container">
+            <label for="github-username">Github Username</label>
+            <input
+              type="text"
+              name="github-username"
+              id="github-username"
+              placeholder="@yourusername"
+            />
+          </div>
+          <button type="submit">Generate My Ticket</button>
+        </form>
+
+        <div
+          id="ticket"
+          class="ticket__container hidden"
+          aria-label="Jonatan Kristof's ticket"
+        >
+          <div class="ticket" aria-labelledby="ticket">
+            <img src="assets/images/pattern-ticket.svg" alt="" />
+            <div class="conference-info">
+              <img src="assets/images/logo-full.svg" alt="" />
+              <div class="date_and_location">
+                <small>Jan 31, 2025 / Austin TX</small>
+              </div>
+            </div>
+            <div class="user">
+              <img
+                src="assets/images/image-avatar.jpg"
+                alt="Jonatan Kristof"
+                class="user__image"
+              />
+              <div class="user__info">
+                <div class="user__name">Jonatan Kristof</div>
+                <div class="user__github">
+                  <img src="assets/images/icon-github.svg" alt="" />
+                  <div class="user__github-username">
+                    <small>@jonatankristof0101</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-id">#01609</div>
+          </div>
+        </div>
       </main>
     </div>
   </body>

@@ -38,7 +38,7 @@
 }
 
 body {
-  line-height: 1.5;
+  line-height: 1.3;
   -webkit-font-smoothing: antialiased;
   font-family: Inconsolata;
 }
@@ -70,11 +70,188 @@ h3 {
   text-wrap: balance;
 }
 
+/* Utility */
+
+.hidden {
+  display: none;
+}
+
 /* Layout */
+
 body {
   min-height: 100vh;
-  background-image: url(assets/images/background-mobile.png),
-    url(assets/images/pattern-lines.svg);
-  background-position: left top, left top;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url("./assets/images/pattern-squiggly-line-top.svg"),
+    url("./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("./assets/images/pattern-lines.svg"),
+    url("./assets/images/background-mobile.png");
+  background-position: right 16px, left bottom, center center, left top;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 200px, contain, cover, cover;
+  background-attachment: fixed, fixed, fixed, fixed;
+}
+
+.wrapper {
+  padding: 0.5rem;
+}
+
+.wrapper > *:not(:last-child),
+main > *:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.logo-container img {
+  margin: 0 auto;
+}
+
+hgroup {
+  color: var(--neutral-0);
+  text-align: center;
+}
+
+hgroup > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+hgroup > p {
+  color: var(--neutral-300);
+}
+
+.user-name {
+  background-image: var(--gradient-text);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.user-email {
+  color: var(--orange-500);
+}
+
+/* Form */
+
+.input-container:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+label[for="avatar"],
+input {
+  width: 100%;
+  background-color: hsla(245, 19%, 35%, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+input {
+  color: var(--neutral-0);
+  padding: 0.5rem;
+  border: 2px solid var(--neutral-500);
+  margin-top: 0.5rem;
+}
+
+input::placeholder {
+  color: var(--neutral-300);
+}
+
+label {
+  color: var(--neutral-0);
+}
+
+.avatar-input-label {
+  color: var(--neutral-0);
+  margin-bottom: 0.5rem;
+}
+
+label[for="avatar"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px dashed var(--neutral-500);
+}
+
+label[for="avatar"] > div:first-child {
+  background-color: var(--neutral-700);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+label[for="avatar"] > div:last-child {
+  color: var(--neutral-300);
+}
+
+#avatar-container-descripion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--neutral-300);
+  margin-top: 0.5rem;
+}
+
+button[type="submit"] {
+  color: var(--neutral-900);
+  font-weight: 700;
+  background-color: var(--orange-700);
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+}
+
+/* Ticket Layout */
+
+.ticket__container,
+.ticket {
+  position: relative;
+}
+
+.conference-info {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  color: var(--neutral-0);
+}
+
+.conference-info div {
+  padding-left: 3rem;
+}
+
+.user {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user img {
+  width: 50px;
+  border-radius: 10px;
+}
+
+.user__info {
+  color: var(--neutral-0);
+}
+
+.user__github {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user__github img {
+  width: 1rem;
+}
+
+.ticket-id {
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 1.25rem;
+  color: var(--neutral-500);
 }
