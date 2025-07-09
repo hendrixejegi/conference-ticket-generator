@@ -38,7 +38,7 @@
           </hgroup>
         </div>
 
-        <form action="">
+        <form name="generate_ticket_form">
           <div class="input-container">
             <div class="avatar-input-label" aria-hidden="true">
               Upload Avatar
@@ -51,7 +51,7 @@
               <div>
                 <img src="assets/images/icon-upload.svg" alt="" />
               </div>
-              <div>Drag and drop or click to upload</div>
+              <div class="file-name">Drag and drop or click to upload</div>
             </label>
             <input
               type="file"
@@ -94,7 +94,7 @@
 
         <div
           id="ticket"
-          class="ticket__container hidden"
+          class="ticket__container"
           aria-label="Jonatan Kristof's ticket"
         >
           <div class="ticket" aria-labelledby="ticket">
@@ -126,5 +126,18 @@
         </div>
       </main>
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js"
+      integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/plugin/localizedFormat.min.js"
+      integrity="sha512-vjS0MkqX58pv35Mv03gzee3TSJ74Gg5lPkgel1V8czy+sTX/ZoFMs/FqnGzWpf3IV+Ry3/mJ0i9nANcjKk1fBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>
